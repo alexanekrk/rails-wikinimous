@@ -1,0 +1,29 @@
+<div>
+  <nav>Wikinimous</nav>
+
+  <p>icone/bouton</p>
+</div>
+
+
+<div>
+
+  <h2><%= @article.title %></h2>
+
+  <a href= <%= edit_article_path %> class="fa fa-pencil"></a>
+
+ <%= link_to "",
+      article_path(@article),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?", }, class:'fa fa-trash' %>
+
+</div>
+
+
+<div>
+  <h4>Content</h3>
+  <p><em><%= @article.content %></em></p>
+
+  <br>
+  <br>
+</div>
+
+<%= link_to "Back to articles", articles_path, class:"btn btn-danger"%>
